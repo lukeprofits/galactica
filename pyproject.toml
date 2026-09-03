@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "galactica"
+version = "0.1.0"
+description = "Precomputed intelligence as data: a local corpus that makes a small local model answer like a much larger one"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "lukeprofits" }]
+keywords = ["rag", "retrieval", "local-llm", "ollama", "offline", "grokipedia"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Indexing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+parquet = ["pyarrow>=14"]
+
+[project.urls]
+Homepage = "https://github.com/lukeprofits/galactica"
+Issues = "https://github.com/lukeprofits/galactica/issues"
+
+[project.scripts]
+galactica = "galactica.cli:main"
+claude-lookup = "galactica.launcher:main"
+
+[tool.setuptools.package-data]
+galactica = ["data/*.toml"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

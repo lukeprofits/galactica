@@ -1,0 +1,56 @@
+# Local models Galactica knows how to recommend, worst to best.
+#
+# Adding a newer model is a data edit, not a code change. Requirements are the
+# memory needed for weights PLUS the KV cache at Galactica's derived context
+# size, which is what actually decides whether a model runs on the GPU. Measured
+# where possible; see README "Choosing a model".
+
+[[model]]
+tag = "qwen3:1.7b"
+tier = 1
+weights_gb = 1.4
+min_memory_gb = 3
+notes = "Last resort. Reads a corpus but attributes it poorly."
+
+[[model]]
+tag = "qwen3:4b"
+tier = 2
+weights_gb = 2.5
+min_memory_gb = 4.5
+notes = "Measured 0.881 factual coverage with a corpus, vs 0.167 without. Fits a 6 GB card with GALACTICA_CONTEXT_BUDGET=4000."
+
+[[model]]
+tag = "qwen3:8b"
+tier = 3
+weights_gb = 5.2
+min_memory_gb = 7
+notes = "Same 0.881 coverage as the 4b, better citation discipline (0.880 vs 0.680)."
+
+[[model]]
+tag = "qwen3:14b"
+tier = 4
+weights_gb = 9.3
+min_memory_gb = 11
+notes = "Untested here. Between the 8b and the 35b on paper."
+
+[[model]]
+tag = "qwen3.6:27b"
+tier = 5
+weights_gb = 18.0
+min_memory_gb = 20
+notes = "Untested here."
+
+[[model]]
+tag = "qwen3.6:35b-mlx"
+tier = 6
+weights_gb = 24.0
+min_memory_gb = 26
+apple_only = true
+notes = "Best measured: 0.905 coverage, 0.920 citation rate. MLX build is Apple Silicon only."
+
+[[model]]
+tag = "qwen3.6:35b"
+tier = 6
+weights_gb = 23.0
+min_memory_gb = 26
+notes = "Non-MLX build of the same model for other platforms."

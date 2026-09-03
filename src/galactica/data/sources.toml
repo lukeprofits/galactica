@@ -1,0 +1,31 @@
+# Corpora Galactica can fetch and ingest.
+#
+# Adding a public source is a data edit: the loaders and profiles already exist.
+# `download_gb` is the file itself; `peak_gb` is what you need free while both
+# the download and the database exist; `db_gb` is what remains afterwards.
+
+[[source]]
+name = "grokipedia"
+profile = "grokipedia"
+title = "Grokipedia v0.1 (Hugging Face dump)"
+hf_repo = "htriedman/grokipedia-v0.1-dump"
+hf_file = "grokipedia_scrape.ndjson"
+documents = 882703
+download_gb = 68.8
+db_gb = 65.0
+peak_gb = 135.0
+license = "CC BY-SA 4.0 (Wikipedia-derived pages) / xAI Community License"
+default = true
+notes = "General encyclopedia. Strong on entities, specifications and dates; weak on procedures and field manuals."
+
+[[source]]
+name = "wikipedia"
+profile = "wikipedia"
+title = "English Wikipedia (pages-articles XML dump)"
+url = "https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2"
+documents = 7000000
+download_gb = 25.0
+db_gb = 55.0
+peak_gb = 85.0
+license = "CC BY-SA 4.0"
+notes = "Broad and independent of Grokipedia, so answers can corroborate or disagree. Sample it unless you have the disk."
