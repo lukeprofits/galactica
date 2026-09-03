@@ -25,7 +25,7 @@ the corpus is 68 GB, and the download resumes if interrupted.
 galactica ask "How did the Free State of Fiume come about?"
 ```
 
-**Inside Claude Code** — how most people will want it:
+**In the terminal (if Claude Code is installed)** — how most people will want it:
 
 ```sh
 claude-lookup
