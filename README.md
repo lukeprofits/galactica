@@ -283,6 +283,13 @@ python -m pytest      # 234 tests, fully offline, no model calls
 Everything runs against a deterministic stub provider: no network, no model, no
 downloads.
 
+## License
+MIT licensed. The corpora it indexes are not — honoring their terms is yours.
+
+`ARCHITECTURE.md` has the thesis, the retrieval cost design, the grounding
+experiment, the measurement traps that cost the most debugging time, and the
+layers this is built to grow into.
+
 ## Future: Compiled Intelligence and Systematic Corpus Growth
 
 The larger vision for Galactica is not merely to search existing documents. It is to use frontier models as **knowledge compilers**.
@@ -419,12 +426,5 @@ durable intelligence stored as data
         ↓
 navigated by inexpensive local models
 ```
-
-## License
-MIT licensed. The corpora it indexes are not — honoring their terms is yours.
-
-`ARCHITECTURE.md` has the thesis, the retrieval cost design, the grounding
-experiment, the measurement traps that cost the most debugging time, and the
-layers this is built to grow into.
 
 
