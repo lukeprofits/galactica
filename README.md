@@ -19,13 +19,13 @@ the corpus is 68 GB, and the download resumes if interrupted.
 
 ## Two ways to use it in the terminal
 
-**In the terminal** — nothing else required:
+**Nothing else required**:
 
 ```sh
 galactica ask "How did the Free State of Fiume come about?"
 ```
 
-**If Claude Code is installed** — how most people will want it:
+**Through Claude Code**:
 
 ```sh
 claude-lookup
