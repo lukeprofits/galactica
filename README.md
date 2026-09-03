@@ -6,6 +6,16 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
 
+## Vision: Intelligence as a Portable Artifact
+
+Galactica explores a different way to build capable AI systems:
+
+> Precompute intelligence, store it as durable data, and use a relatively small local model to navigate that intelligence.
+
+Most AI systems try to compress knowledge and reasoning into model weights. Galactica starts from the observation that storage is much cheaper, easier to copy, and easier to preserve than frontier-scale inference.
+
+Instead of requiring every local model to independently rediscover the same facts, explanations, procedures, and reasoning patterns, powerful models can perform that work once and save the result in a reusable corpus. A smaller local model can then act as an interpreter and navigator of that corpus.
+
 ## Install
 
 ```sh
