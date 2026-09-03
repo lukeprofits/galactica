@@ -17,7 +17,7 @@ don't have it, picks a local model sized to your hardware, pulls it, then
 downloads and indexes the corpus. No further setup. Expect it to run a while —
 the corpus is 68 GB, and the download resumes if interrupted.
 
-## Two ways to use it
+## Two ways to use it in the terminal
 
 **In the terminal** — nothing else required:
 
@@ -25,7 +25,7 @@ the corpus is 68 GB, and the download resumes if interrupted.
 galactica ask "How did the Free State of Fiume come about?"
 ```
 
-**In the terminal (if Claude Code is installed)** — how most people will want it:
+**If Claude Code is installed** — how most people will want it:
 
 ```sh
 claude-lookup
