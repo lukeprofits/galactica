@@ -6,7 +6,7 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
 
-## Vision: Intelligence as a Portable Artifact
+## Vision
 
 Galactica explores a different way to build capable AI systems:
 
